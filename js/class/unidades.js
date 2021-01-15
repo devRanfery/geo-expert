@@ -19,7 +19,7 @@ const printUnits = async (unitsList) => {
           <p style="height: 200px;">
             ${value.Descripcion}
           </p>
-          <input type="text" value="${unidad}" id="idUnidad${key}">
+          <input type="text" value="${unidad}" id="idUnidad${key}" style="display:none;">
           <button type="submit" class="btn bb-btn" onclick="getActivitiesUnit(${key})">Iniciar</button>
         </div>
       </div>
