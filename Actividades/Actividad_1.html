@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../img/fav.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Travel</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+      rel="stylesheet"
+    />
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="../css/linearicons.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" />
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
+    <link rel="stylesheet" href="../css/nice-select.css" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container main-menu">
+        <div class="row align-items-center justify-content-between d-flex">
+          <div id="logo">
+            <a href="index.html"
+              ><img src="../img/logo3.png" alt="" title="" style="width: 60px"
+            /></a>
+          </div>
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Ayuda</a></li>
+              <li>
+                <button class="btn btn-danger" onclick="cerrarsesion()">
+                  Cerrar sesion
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <!-- #nav-menu-container -->
+        </div>
+      </div>
+    </header>
+    <!-- #header -->
+
+    <!-- start banner Area -->
+    <section class="about-banner relative">
+      <div class="overlay overlay-bg"></div>
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="about-content col-lg-12">
+            <!-- <h1 class="text-white">B</h1> -->
+            <h4 class="text-white" id="nameUserName"></h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start destinations Area -->
+    <section class="destinations-area section-gap">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="menu-content col-lg-8">
+            <div class="title text-center">
+              <h1 class="mb-10">Actividad 1</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="container"
+            style="margin: 40px; display: flex; justify-content: center"
+          >
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ylia8W1HuG8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="col-lg-12">
+            <div id="test"></div>
+            <div id="resultado"></div>
+            <br />
+            <button class="btn btn-success" id="boton">Mostrar resultado</button>
+            <button class="btn btn-primary" onclick="volver()" id="boton">
+              Actividades
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End destinations Area -->
+
+    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/easing.min.js"></script>
+    <script src="../js/hoverIntent.js"></script>
+    <script src="../js/superfish.min.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/mail-script.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/class/verifyToken.js"></script>
+    <script src="./js/Actividad_1.js"></script>
+  </body>
+</html>

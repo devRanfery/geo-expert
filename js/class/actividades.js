@@ -1,6 +1,7 @@
 const printActivities = async (activitiesList) => {
   await $('.actividades').empty();
   await $.each(activitiesList, (key, value) => {
+    var unidad = String(value._id);
     $('.actividades').append(
       `
       <div class="col-lg-4" data-unit-key=${value._id}>
@@ -10,10 +11,8 @@ const printActivities = async (activitiesList) => {
             <span>${value.Descripcion}</span>
           </h4>
           <p>Puntaje | ${value.Puntaje}</p>
-          <p>
-            ${value.Descripcion}
-          </p>
-          <button class="btn bb-btn" onclick="getActivitiesUnit" >Comenzar</button>
+          <input type="text" value="${unidad}" id="idEjercicio${key}" style="display:none;">
+          <a href="Actividades/${value.Ejercicio}?act=${value._id}" class="btn bb-btn">Comenzar</a>
         </div>
       </div>
     </div>
@@ -36,6 +35,8 @@ function obtenerValorParametro(sParametroNombre) {
 
 const getActivitiesUnit = async () => {
   var unidad = obtenerValorParametro('id');
+  sessionStorage.setItem('Unidad', unidad);
+
   var ruta = 'https://geoexpert.herokuapp.com/api/actividades/' + unidad;
   await $.ajax({
     url: ruta,
@@ -48,3 +49,31 @@ const getActivitiesUnit = async () => {
 };
 
 getActivitiesUnit();
+
+const getProgressByPractices = async () => {
+  var usuario = sessionStorage.getItem('Id');
+  var unidad = sessionStorage.getItem('Unidad');
+
+  var data = {
+    Usuario: usuario,
+    Unidad: unidad,
+  };
+  console.log(data);
+
+  var ruta = 'https://geoexpert.herokuapp.com/api/ejercicios/students';
+  await $.ajax({
+    url: ruta,
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    data: JSON.stringify(data),
+    success: (response) => {
+      var data = response['practices'];
+      // printActivities(data);
+      console.log(data);
+    },
+  });
+};
+
+getProgressByPractices();

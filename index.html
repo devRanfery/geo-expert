@@ -99,7 +99,7 @@
                 role="tabpanel"
                 aria-labelledby="flight-tab"
               >
-                <form class="form-wrap" autocomplete="off">
+                <form class="form-wrap" autocomplete="off" id="FormRegister">
                   <input
                     type="text"
                     class="form-control"
@@ -148,7 +148,9 @@
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Contraseña '"
                   />
-                  <a href="#" class="primary-btn text-uppercase">Registrarse</a>
+                  <button type="submit" class="primary-btn text-uppercase">
+                    Registrarse
+                  </button>
                 </form>
 
                 <div class="container p-3" style="display: flex; justify-content: center">
@@ -176,5 +178,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/class/register.js"></script>
   </body>
 </html>

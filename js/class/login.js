@@ -23,6 +23,7 @@ function login(FormData) {
         location.href = '../unidades.html';
         sessionStorage.setItem('Token', data.token);
         sessionStorage.setItem('Username', data.usuario);
+        sessionStorage.setItem('Id', data.id);
       }
     });
 }
