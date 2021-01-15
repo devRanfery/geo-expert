@@ -71,7 +71,7 @@ const getProgressByPractices = async () => {
     success: (response) => {
       var data = response['practices'];
       // printActivities(data);
-      console.log(data);
+      console.log(response);
     },
   });
 };
