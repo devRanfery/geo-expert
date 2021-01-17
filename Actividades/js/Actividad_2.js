@@ -4,29 +4,38 @@ const resultadoTest = document.getElementById('resultado');
 
 const preguntas = [
   {
-    pregunta: '1. Característica del espacio geográfico',
+    pregunta:
+      '1. La región es espacio terrestre con caracteristicas naturales, sociales, culturales y económicas semejantes que le dan identidad y la diferencian de otras.',
     respuestas: {
-      a: 'Distribución',
-      b: 'Geolocalizacion',
-      c: 'Otra',
+      a: 'Verdadero',
+      b: 'Falso',
     },
     respuestaCorrecta: 'a',
   },
   {
-    pregunta: '2. Para que se utilizan los puntos cardinales?',
+    pregunta:
+      '2. El territorio es el espacio terrestre delimitado politicamente y dividido en terminos politicos-administrativos, como los paises, estados o municipios.',
     respuestas: {
-      a: 'Busqueda de personas especificas',
-      b: 'Localizar lugar especificos',
-      c: 'Localizar superficies planas',
+      a: 'Verdadero',
+      b: 'Falso',
     },
-    respuestaCorrecta: 'b',
+    respuestaCorrecta: 'a',
   },
   {
-    pregunta: '3. Coordenadas geograficas?',
+    pregunta:
+      '3. El paisaje es el espacio de la superficie terrestre que se observa, producto de la interaccion del relieve, clima, agua, suelo, vegetación y fauna y de las modificaciones hechas por los grupos humanos a lo largo del tiempo',
     respuestas: {
-      a: 'Latitud, Longitud, Altitud',
-      b: 'Polo norte, Ecuador, Polo sur',
-      c: 'Ninguna de las anteriores',
+      a: 'Verdadero',
+      b: 'Falso',
+    },
+    respuestaCorrecta: 'a',
+  },
+  {
+    pregunta:
+      '3. El lugar es el espacio mas cercano y la escala mas pequeña de analisis del espacio geográfico. Se reconoce a partir de su nombre y se localiza por medio de sus coordenadas geográficas.',
+    respuestas: {
+      a: 'Verdadero',
+      b: 'Falso',
     },
     respuestaCorrecta: 'a',
   },

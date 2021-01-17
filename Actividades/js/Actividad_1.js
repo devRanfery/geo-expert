@@ -85,7 +85,8 @@ function mostrarResultado() {
     ' preguntas de un total de ' +
     preguntas.length;
 
-  getData(respuestasCorrectas, preguntas.length);
+  // getData(respuestasCorrectas, preguntas.length);
+  UpdateScore(respuestasCorrectas, preguntas.length);
 }
 
 botonRes.addEventListener('click', mostrarResultado);
@@ -102,28 +103,51 @@ function obtenerValorParametro(sParametroNombre) {
   return null;
 }
 
-const getData = async (puntaje, total) => {
+// const getData = async (puntaje, total) => {
+//   var actividad = obtenerValorParametro('act');
+//   var Ejercicio = {
+//     Usuario: sessionStorage.getItem('Id'),
+//     Unidad: sessionStorage.getItem('Unidad'),
+//     Actividad: actividad,
+//     Puntaje: puntaje,
+//     Total: total,
+//   };
+
+//   await $.ajax({
+//     url: 'https://geoexpert.herokuapp.com/api/ejercicios',
+//     method: 'POST',
+//     headers: {
+//       'Content-type': 'application/json',
+//     },
+//     data: JSON.stringify(Ejercicio),
+//     success: (response) => {
+//       // console.log(response);
+//     },
+//   });
+// };
+
+const UpdateScore = async (puntaje, total) => {
   var actividad = obtenerValorParametro('act');
-  var Ejercicio = {
+
+  var score = {
     Usuario: sessionStorage.getItem('Id'),
-    Unidad: sessionStorage.getItem('Unidad'),
     Actividad: actividad,
     Puntaje: puntaje,
     Total: total,
   };
+  console.log(score);
 
   await $.ajax({
-    url: 'https://geoexpert.herokuapp.com/api/ejercicios',
+    url: 'https://geoexpert.herokuapp.com/api/actividades/score',
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
     },
-    data: JSON.stringify(Ejercicio),
+    data: JSON.stringify(score),
     success: (response) => {
-      console.log(response);
+      // console.log('Respuesta' + response);
     },
   });
-  //   console.log(Ejercicio);
 };
 
 const volver = async () => {
