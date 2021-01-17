@@ -20,7 +20,7 @@ const login = async (user, unidad, actividad, ejercicio) => {
       if (data.message) {
         consele.error(data.message);
       } else {
-        data.data['activities'];
+        data['data'];
       }
     });
 };
@@ -57,9 +57,12 @@ function register(FormData) {
         var ejercicio1 = 'Actividad_1.html';
         var ejercicio2 = 'Actividad_2.html';
         login(user, unidad1, actividad1, ejercicio1);
+        login(user, unidad1, actividad2, ejercicio2);
 
         // login(user, unidad1, actividad2, ejercicio2);
         // login(user, unidad2, actividad2, ejercicio2);
+        // location.href = './login.html';
+        alert('REGISTRADO EXITOSAMENTE');
         location.href = './login.html';
         // var myData = data['data'];
         // console.log(myData);

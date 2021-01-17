@@ -15,3 +15,9 @@ const cerrarsesion = async () => {
   sessionStorage.removeItem('Token');
   location.href = 'login.html';
 };
+
+const cerrarsesionActividades = async () => {
+  sessionStorage.removeItem('Username');
+  sessionStorage.removeItem('Token');
+  location.href = '../login.html';
+};
