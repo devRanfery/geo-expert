@@ -57,10 +57,10 @@ function register(FormData) {
         var ejerIntro = 'introduccion.html';
         var actividad1 = 'Actividad 1';
         var actividad2 = 'Actividad 2';
-        var actividad3 = 'Actividad 3';
+        // var actividad3 = 'Actividad 3';
         var ejercicio1 = 'Actividad_1.html';
         var ejercicio2 = 'Actividad_2.html';
-        var ejercicio3 = 'Actividad_3.html';
+        // var ejercicio3 = 'Actividad_3.html';
         login(user, unidad1, introduccion, ejerIntro);
         login(user, unidad2, actividad1, ejercicio1);
         login(user, unidad2, actividad2, ejercicio2);
