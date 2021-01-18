@@ -50,6 +50,7 @@ function mostrarTest() {
     preguntasYrespuestas.push(
       `<div class="cuestion" style="margin-bottom: 10px;">${preguntaActual.pregunta}</div>
           <div class="respuestas"> ${respuestas.join('')} </div>
+          <div><strong class="message" style="text-decoration-line: underline;"></strong></div>
           <br>
           `
     );
@@ -62,6 +63,7 @@ mostrarTest();
 
 function mostrarResultado() {
   const respuestas = contenedor.querySelectorAll('.respuestas');
+  const message = contenedor.querySelectorAll('.message');
   let respuestasCorrectas = 0;
 
   preguntas.forEach((preguntaActual, numeroDePregunta) => {
@@ -75,6 +77,13 @@ function mostrarResultado() {
 
       respuestas[numeroDePregunta].style.color = 'blue';
     } else {
+      console.log(
+        (message[numeroDePregunta].innerHTML =
+          'Respuesta correcta: ' +
+          preguntaActual.respuestas[preguntaActual.respuestaCorrecta])
+      );
+      console.log(preguntaActual.respuestas[preguntaActual.respuestaCorrecta]);
+
       respuestas[numeroDePregunta].style.color = 'red';
     }
   });
@@ -85,7 +94,6 @@ function mostrarResultado() {
     ' preguntas de un total de ' +
     preguntas.length;
 
-  // getData(respuestasCorrectas, preguntas.length);
   UpdateScore(respuestasCorrectas, preguntas.length);
 }
 
@@ -102,29 +110,6 @@ function obtenerValorParametro(sParametroNombre) {
   }
   return null;
 }
-
-// const getData = async (puntaje, total) => {
-//   var actividad = obtenerValorParametro('act');
-//   var Ejercicio = {
-//     Usuario: sessionStorage.getItem('Id'),
-//     Unidad: sessionStorage.getItem('Unidad'),
-//     Actividad: actividad,
-//     Puntaje: puntaje,
-//     Total: total,
-//   };
-
-//   await $.ajax({
-//     url: 'https://geoexpert.herokuapp.com/api/ejercicios',
-//     method: 'POST',
-//     headers: {
-//       'Content-type': 'application/json',
-//     },
-//     data: JSON.stringify(Ejercicio),
-//     success: (response) => {
-//       // console.log(response);
-//     },
-//   });
-// };
 
 const UpdateScore = async (puntaje, total) => {
   var actividad = obtenerValorParametro('act');
